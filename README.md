@@ -15,16 +15,16 @@
 ## セットアップ方法
 
 ### 1. リポジトリをクローン
-bash
-`git clone https://github.com/Ichinose311/100-swing-drill.git
+bash\
+`git clone https://github.com/Ichinose311/100-swing-drill.git\
 cd 100-swing-drill`
 
 ### 2. 外部依存のインストール
-macOS(Homebrew)
-`brew install mecab mecab-ipadic cabocha swig`
-Linux(Ubuntu)
-`sudo apt update
-sudo apt install mecab mecab-ipadic-utf8 libmecab-dev swig`
+macOS(Homebrew)\
+`brew install mecab mecab-ipadic cabocha swig`\
+Linux(Ubuntu)\
+`sudo apt update\
+sudo apt install mecab mecab-ipadic-utf8 libmecab-dev swig`\
 *CaboCha/CRF++が必要な場合は別途インストールする
 
 ### 3. Python環境の構築
