@@ -16,8 +16,8 @@
 
 ### 1. リポジトリをクローン
 bash\
-`git clone https://github.com/Ichinose311/100-swing-drill.git\
-cd 100-swing-drill`
+`git clone https://github.com/Ichinose311/100-swing-drill.git`\
+`cd 100-swing-drill`
 
 ### 2. 外部依存のインストール
 macOS(Homebrew)\
@@ -28,13 +28,13 @@ sudo apt install mecab mecab-ipadic-utf8 libmecab-dev swig`\
 *CaboCha/CRF++が必要な場合は別途インストールする
 
 ### 3. Python環境の構築
-bash
+bash\
 `uv sync`
 
 ### 4. PyTorchのイントール
-bash
+bash\
 `uv pip install torch`
 
 ### 実行方法
-bash 
+bash \
 `uv run python main.py`
