@@ -16,7 +16,9 @@
 
 ### 1. リポジトリをクローン
 bash
+
 git clone https://github.com/Ichinose311/100-swing-drill.git
+
 cd 100-swing-drill
 
 ### 2. 外部依存のインストール
