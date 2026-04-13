@@ -1,0 +1,1 @@
+print(len(open('popular-names.txt').readlines()))  
