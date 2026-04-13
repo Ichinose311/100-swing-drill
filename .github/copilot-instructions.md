@@ -27,5 +27,3 @@ This is a Python implementation of "言語処理100本ノック" (Language Proce
 - **File Naming**: `XX.py` where XX is zero-padded exercise number (00-99).
 - **Code Style**: Minimal, functional code; no classes or functions unless necessary.
 - **Comments**: Sparse; rely on code clarity for NLP concepts.
-
-Reference: [capter_1/00.py](capter_1/00.py) for basic string interleaving, [capter_1/02.py](capter_1/02.py) for reversal pattern.
