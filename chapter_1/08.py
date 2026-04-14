@@ -1,10 +1,15 @@
+# 変数名で役割を明確にする（p.18）
 def cipher(text):
-    ciphered_text = ""
+    result = ""
+
     for char in text:
-        if char.islower(): #小文字の場合
-            ciphered_text += chr(219 - ord(char)) #219から文字コードを引いた文字を追加
-        else: #それ以外の文字はそのまま追加
-            ciphered_text += char
-    return ciphered_text
-print(cipher("Hello, World!")) #暗号化
-print(cipher(cipher("Hello, World!"))) #復号化
+        if char.islower():
+            # 複雑な式には説明を付ける（p.56）
+            result += chr(219 - ord(char))
+        else:
+            result += char
+
+    return result
+
+print(cipher("Hello, World!")) 
+print(cipher(cipher("Hello, World!")))
