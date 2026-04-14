@@ -1,4 +1,4 @@
-# 同じ処理は関数にまとめる（p.44）
+# 汎用コードをたくさん作る（p.135）
 def generate_n_gram(n, text):
     text = text.replace(" ", "")
     return [text[i:i+n] for i in range(len(text)-n+1)]
@@ -6,7 +6,7 @@ def generate_n_gram(n, text):
 text1 = "paraparaparadise"
 text2 = "paragraph"
 
-# 名前で役割を明確にする（p.18）
+# 名前のフォーマットで情報を伝える（p.25）
 set_x = set(generate_n_gram(2, text1))
 set_y = set(generate_n_gram(2, text2))
 

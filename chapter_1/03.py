@@ -1,10 +1,10 @@
-# 一つの処理を一行で詰め込みすぎない（p.64）
+# 明確な単語を選ぶ（p.10）
 text = "Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics."
 
 clean_text = text.replace(",", "").replace(".", "")
 words = clean_text.split()
 
-# 意味のある名前を使う（p.18）
+# 名前のフォーマットで情報を伝える（p.25）
 word_lengths = [len(word) for word in words]
 
 print(word_lengths)
