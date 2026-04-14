@@ -1,10 +1,11 @@
-# 変数名で役割を明確にする（p.18）
+# 明確な単語を選ぶ（p.10）
 def cipher(text):
     result = ""
 
     for char in text:
         if char.islower():
-            # 複雑な式には説明を付ける（p.56）
+            # コードの意図を書く（p.76）
+            # アルファベットの文字コードの合計219（a=97, z=122）から、現在の文字コードを引いた値
             result += chr(219 - ord(char))
         else:
             result += char
