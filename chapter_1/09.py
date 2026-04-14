@@ -1,15 +1,22 @@
 import random
 
+# 意味のある名前を使う（p.18）
 text = "I couldn’t believe that I could actually understand what I was reading : the phenomenal power of the human mind ."
-print_text = ""
-text_list = text.split() 
-for word in text_list:
+
+words = text.split()
+result_text = ""
+
+for word in words:
     if len(word) > 4:
-        first = word[:1] #単語の最初の文字
-        last = word[-1:] #単語の最後の文字
-        other = word[1:-1] #単語の最初と最後の文字以外の部分
-        shuffled_other = ''.join(random.sample(other, len(other)))  # otherの文字をランダムに入れ替え
-        print_text += first + shuffled_other + last + " "
+        first_char = word[0]
+        last_char = word[-1]
+        middle = word[1:-1]
+
+        # 中間変数で処理を分かりやすくする（p.53）
+        shuffled_middle = ''.join(random.sample(middle, len(middle)))
+
+        result_text += first_char + shuffled_middle + last_char + " "
     else:
-        print_text += word + " "
-print(print_text)
+        result_text += word + " "
+
+print(result_text)

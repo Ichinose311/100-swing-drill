@@ -1,5 +1,10 @@
+# 一つの処理を一行で詰め込みすぎない（p.64）
 text = "Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics."
-alphabet_text = text.replace(",", "").replace(".", "") #文字列からカンマとピリオドを取り除く
-word_list = alphabet_text.split() #文字列をスペースで分割してリストにする
-word_length_list = [len(word) for word in word_list] #リスト内包表記を使って、各単語の文字数をリストにする
-print(word_length_list)
+
+clean_text = text.replace(",", "").replace(".", "")
+words = clean_text.split()
+
+# 意味のある名前を使う（p.18）
+word_lengths = [len(word) for word in words]
+
+print(word_lengths)
