@@ -1,9 +1,16 @@
+# 意味のある名前を使う（p.18）
 text = "Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations Might Also Sign Peace Security Clause. Arthur King Can."
-alphabet_text = text.replace(",", "").replace(".", "").split() #文字列からカンマとピリオドを取り除いてスペースで分割してリストにする
-dictionary = {}
-for i in range(len(alphabet_text)):
-    if i + 1 in [1, 5, 6, 7, 8, 9, 15, 16, 19]: # i+1が1, 5, 6, 7, 8, 9, 15, 16, 19のときは、単語の最初の文字をキーにする
-        dictionary[alphabet_text[i][0]] = i + 1
-    else: #それ以外のときは、単語の最初の2文字をキーにする
-        dictionary[alphabet_text[i][0:2]] = i + 1
-print(dictionary)
+
+words = text.replace(",", "").replace(".", "").split()
+element_dict = {}
+
+# 定数はまとめる（p.72）
+special_indices = {1, 5, 6, 7, 8, 9, 15, 16, 19}
+
+for i, word in enumerate(words, start=1):
+    if i in special_indices:
+        element_dict[word[0]] = i
+    else:
+        element_dict[word[:2]] = i
+
+print(element_dict)
