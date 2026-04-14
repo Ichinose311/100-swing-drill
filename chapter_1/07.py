@@ -1,4 +1,4 @@
-# 関数名は何をするか明確にする（p.18）
+# 名前のフォーマットで情報を伝える（p.25）
 def create_template_sentence(time, subject, value):
     return f"{time}時の{subject}は{value}"
 
