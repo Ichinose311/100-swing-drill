@@ -12,3 +12,4 @@ for i in range(N):
 
     chunk = df.iloc[start:end]
     chunk.to_csv(f"out_{i}.txt", sep="\t", header=False, index=False)
+#出力結果はout_0.txt, out_1.txt, ..., out_9.txtの10ファイルに分割される
