@@ -1,8 +1,10 @@
 import pandas as pd
 
 df = pd.read_csv("popular-names.txt", sep="\t", header=None)
+# 明確な単語を選ぶ（p.10）
 # 重複行の削除
-print(df[0].unique())
+unique_names = df[0].unique()
+print(unique_names)
 # 出力結果
 #[     'Mary',      'Anna',      'Emma', 'Elizabeth',    'Minnie',  'Margaret',
 #       'Ida',     'Alice',    'Bertha',     'Sarah',

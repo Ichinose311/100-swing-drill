@@ -1,8 +1,10 @@
 import pandas as pd
 
 df = pd.read_csv("popular-names.txt", sep="\t", header=None)
+# 明確な単語を選ぶ（p.10）
 # 3列目の数値で降順にソート
-print(df.sort_values(2, ascending=False))
+df_sorted = df.sort_values(2, ascending=False)
+print(df_sorted)
 # 出力結果
 #            0  1      2     3
 #1340    Linda  F  99689  1947
