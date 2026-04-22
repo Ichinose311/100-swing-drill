@@ -1,5 +1,8 @@
 import pandas as pd
 # 末尾10行を表示
+#sep='\t'  # タブ区切り
+#header=None  # ヘッダーなし
+# 明確な単語を選ぶ（p.10）
 df = pd.read_csv('popular-names.txt', sep='\t', header=None)
 print(df.tail(n=10))
 # 出力結果
