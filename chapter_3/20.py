@@ -1,5 +1,8 @@
 import pandas as pd
 
-df = pd.read_json('jawiki-country.json.gz', lines=True) #JSON形式のファイルを読み込む。lines=Trueは、各行が独立したJSONオブジェクトであることを示す。
-uk_text = df.query('title=="イギリス"')["text"].values[0] #title行がイギリスの行を抽出し、text列の値を取り出す。最初の要素を取り出す。
+df = pd.read_json('jawiki-country.json.gz', lines=True) 
+#JSON形式のファイルを読み込む。lines=Trueは、1行ごとに1つのJSONデータが入っている形式
+uk_text = df.query('title=="イギリス"')["text"].values[0] 
+#title列がイギリスの行を抽出し、text列の値を取り出す。配列形式で最初の要素を取り出す。
 print(uk_text)
+#出力結果
