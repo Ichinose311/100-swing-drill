@@ -23,3 +23,4 @@ for line in uk_texts:
     if r:
         result[r[1]] = r[2]
 print(remove_internal_link(remove_emphasis(result)))
+#出力結果

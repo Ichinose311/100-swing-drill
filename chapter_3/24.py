@@ -20,3 +20,4 @@ for file in re.findall(r"\[\[(ファイル|File):([^]|]+?)(\|.*?)+\]\]", uk_text
     # file = ('ファイル', 'Example.jpg', '|thumb') インデックス1のとき
     # file[1] = 'Example.jpg'
     print(file[1])
+#出力結果

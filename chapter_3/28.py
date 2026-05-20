@@ -49,3 +49,4 @@ for line in uk_texts:
         result[r[1]] = r[2]
 result = {k: remove_markup(v) for k, v in result.items()}
 print(result)
+#出力結果
