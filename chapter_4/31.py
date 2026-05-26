@@ -15,3 +15,4 @@ while node:
     if features[0] == "動詞": #feature[0]->品詞
         print(node.surface, "->", features[6]) #surfaceはそのままの単語,features[6]は基本形
     node = node.next
+# 出力結果

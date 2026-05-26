@@ -29,3 +29,5 @@ for i, chunk in enumerate(chunks): #文節を1つずつ見る
     dst = chunk["link"] #係り先の文節番号
     if dst != -1 and dst < len(chunks): #文節じゃない、係り先が存在する
         print(chunk["text"], "\t", chunks[dst]["text"])
+
+# 出力結果
