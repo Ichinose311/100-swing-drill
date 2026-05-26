@@ -27,3 +27,8 @@ for i in range(len(words) - 2):
     ):
         phrase = words[i]["surface"] + words[i + 1]["surface"] + words[i + 2]["surface"]
         print(phrase)
+# 出力結果
+'''
+暴虐の王
+村の牧人
+'''
