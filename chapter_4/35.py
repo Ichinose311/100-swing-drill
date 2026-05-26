@@ -26,3 +26,5 @@ for i in range(tree.size()):
 for i, chunk in enumerate(chunks):
     if chunk["link"] != -1:
         print(f"{chunk['text']} → {chunks[chunk['link']]['text']}")
+
+# 出力結果

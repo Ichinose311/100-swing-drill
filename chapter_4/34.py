@@ -32,3 +32,5 @@ for i, chunk in enumerate(chunks):
             print("主語:", chunk["text"])
             print("述語:", chunks[dst]["text"])
             print()
+
+# 出力結果
