@@ -12,7 +12,7 @@ MODEL = "gemini-2.5-flash-lite"
 
 # 無料枠や503対策のため、最初は20問だけで試す
 # 全問で評価したい場合は None にする
-MAX_QUESTIONS = None
+MAX_QUESTIONS = 20
 
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
