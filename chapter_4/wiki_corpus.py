@@ -68,16 +68,19 @@ def iter_articles():
     data_path = find_data_file()
 
     with gzip.open(data_path, "rt", encoding="utf-8") as f:
+        # JSONL形式で1行ずつ記事が格納されているので、1行ずつ読み込んでJSONとしてパースする
+        '''
+        {"title": "イギリス", "text": "イギリス（英: United Kingdom、正式名称: グレートブリテン及び北アイルランド連合王国）は、ヨーロッパの島国である。 ..."}'''
         for line in f:
             yield json.loads(line)
 
-
+# 記事本文をMeCabで形態素解析して、単語と品詞を1つずつ返す関数
 def iter_morphs():
     tagger = MeCab.Tagger()
 
     for article in iter_articles():
-        text = remove_markup(article["text"])
-        node = tagger.parseToNode(text)
+        text = remove_markup(article["text"]) #マークアップを除去したテキスト
+        node = tagger.parseToNode(text) #形態素解析して、単語がnodeとして連結されている
 
         while node:
             surface = node.surface
@@ -89,14 +92,15 @@ def iter_morphs():
 
             node = node.next
 
-
+# 単語の出現回数を数える関数
 def count_words(pos=None, exclude_symbols=True):
-    counter = Counter()
-
+    counter = Counter() #単語の出現回数を数えるためのCounterオブジェクトを作る
+    # iter_morphs()を呼び出して、単語と品詞を1つずつ取得する
     for surface, part_of_speech in iter_morphs():
+        # 品詞が記号の場合は数えないようにする
         if exclude_symbols and part_of_speech in ["記号", "補助記号"]:
             continue
-
+        # 品詞に限らず全部数える
         if pos is None or part_of_speech == pos:
             counter[surface] += 1
 
