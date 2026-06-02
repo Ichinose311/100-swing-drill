@@ -16,8 +16,8 @@ for i in range(tree.size()): #単語ごとに見ていく
     if token.chunk is not None: 
         # 新しい文節
         current_chunk = {
-            "text": "",
-            "link": token.chunk.link
+            "text": "", #文節のテキスト
+            "link": token.chunk.link #係り先の文節番号
         }
         chunks.append(current_chunk)
 

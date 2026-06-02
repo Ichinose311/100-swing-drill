@@ -194,3 +194,44 @@ def main():
 
 if __name__ == "__main__":
     main()
+#出力
+'''
+==== 実験設定 ====
+科目: high_school_computer_science
+モデル: gemini-2.5-flash-lite
+温度: 0.0
+設定: 正解選択肢をすべてDに移動
+CSV: ../data/JMMLU/JMMLU/high_school_computer_science.csv
+
+1: pred=D, gold=D, original_gold=A, OK
+2: pred=D, gold=D, original_gold=A, OK
+3: pred=C, gold=D, original_gold=C, NG
+4: pred=D, gold=D, original_gold=B, OK
+5: pred=D, gold=D, original_gold=C, OK
+6: pred=D, gold=D, original_gold=B, OK
+7: pred=D, gold=D, original_gold=B, OK
+8: pred=D, gold=D, original_gold=A, OK
+9: pred=D, gold=D, original_gold=B, OK
+10: pred=D, gold=D, original_gold=B, OK
+11: pred=D, gold=D, original_gold=C, OK
+12: pred=D, gold=D, original_gold=C, OK
+13: pred=D, gold=D, original_gold=B, OK
+14: pred=D, gold=D, original_gold=C, OK
+15: pred=D, gold=D, original_gold=A, OK
+16: pred=D, gold=D, original_gold=D, OK
+17: pred=D, gold=D, original_gold=D, OK
+18: pred=D, gold=D, original_gold=D, OK
+19: pred=D, gold=D, original_gold=A, OK
+20: pred=D, gold=D, original_gold=C, OK
+
+==== 結果 ====
+科目: high_school_computer_science
+問題数: 20
+正解数: 19
+正解率: 0.950
+正解率(%): 95.0%
+
+==== 予測ラベルの分布 ====
+C: 1
+D: 19
+'''
