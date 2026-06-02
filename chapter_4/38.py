@@ -5,8 +5,9 @@ import MeCab
 
 from wiki_corpus import iter_articles, remove_markup
 
+# 文章から名詞だけを取り出す関数
 def extract_nouns(text, tagger):
-    nouns = []
+    nouns = [] #名詞を保存するリスト
 
     node = tagger.parseToNode(text)
 
@@ -28,12 +29,13 @@ def main():
     # コーパス全体の記事数
     total_articles = 0
 
-    # 各名詞が何記事に出現したか
+    # 各名詞が何個の記事に出現したか(DF)
     document_frequency = Counter()
 
     # 日本記事の名詞リスト
     japan_nouns = None
 
+    #Wikipedia記事を1つずつ読み込んでいる
     for article in iter_articles():
         total_articles += 1
 
