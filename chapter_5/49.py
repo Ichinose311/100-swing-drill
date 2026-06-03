@@ -1,10 +1,14 @@
-import os
+import os  # 環境変数からAPIキーを取得するために使用
 
-from google import genai
+from google import genai  # Gemini APIを利用するためのライブラリ
 
 
+# トークン数を計測する対象のGeminiモデル
+# トークン数はモデルごとのトークナイザに依存するため、モデル名を指定する
 MODEL = "gemini-2.5-flash-lite"
 
+# トークン数を計測したい文章
+# 今回は夏目漱石『吾輩は猫である』の冒頭部分を対象にする
 TEXT = """
 吾輩は猫である。名前はまだ無い。
 
@@ -12,20 +16,43 @@ TEXT = """
 """
 
 
+# 環境変数 GEMINI_API_KEY からAPIキーを読み込み、Gemini APIのクライアントを作成する
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 
 def main():
+    """
+    メイン処理。
+    指定した文章 TEXT を、指定したモデル MODEL に入力した場合の
+    トークン数をGemini APIで計測し、文字数とともに表示する。
+    """
+
+    # Gemini APIのcount_tokensを使って、TEXTのトークン数を計測する
     result = client.models.count_tokens(
         model=MODEL,
         contents=TEXT,
     )
 
+    # 計測結果を表示する
     print("==== トークン数計測 ====")
     print(f"モデル: {MODEL}")
+
+    # Pythonのlen関数で文字数を表示する
+    # 改行や空白も文字数に含まれる
     print(f"文字数: {len(TEXT)}")
+
+    # Gemini APIが返したトークン数を表示する
     print(f"トークン数: {result.total_tokens}")
 
 
+# このファイルを直接実行したときだけ main() を実行する
 if __name__ == "__main__":
     main()
+    
+#出力結果
+'''
+==== トークン数計測 ====
+モデル: gemini-2.5-flash-lite
+文字数: 452
+トークン数: 272
+'''
