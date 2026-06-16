@@ -11,6 +11,7 @@
     "mecab-python3>=1.0.12",
     "numpy",
     "openai>=2.40.0",
+    "pandas>=2.3.3",
     "scikit-learn>=1.7.2",
     "unidic-lite>=1.0.8",
 ]
