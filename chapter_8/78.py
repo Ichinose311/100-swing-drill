@@ -1,0 +1,1 @@
+#78はAIXのマシンなどのマルチGPU環境ならば，torch.nn.DataParallelを用いてマルチGPUで動かすこと
