@@ -1,0 +1,2 @@
+#80~84
+#ライブラリはhuggingfaceのtransformersを，モデルはGoogleのbert-base-uncasedを使用すること
