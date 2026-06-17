@@ -93,3 +93,22 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+#出力結果
+'''
+単語埋め込み行列を作成しました
+読み込んだ単語数: 100000
+語彙数 V: 100001
+埋め込み次元数 d: 300
+埋め込み行列の形状: torch.Size([100001, 300])
+
+確認
+<PAD> のID: 0
+<PAD> のベクトル先頭5次元: tensor([0., 0., 0., 0., 0.])
+United_States のID: 410
+United_States のベクトル先頭5次元: tensor([-0.0361, -0.0483,  0.2354,  0.1748, -0.1465])
+
+保存しました: /home/ichinose/projects/100-swing-drill/chapter_8/embedding_matrix.pt
+保存しました: /home/ichinose/projects/100-swing-drill/chapter_8/token_to_id.pkl
+保存しました: /home/ichinose/projects/100-swing-drill/chapter_8/id_to_token.pkl
+'''
