@@ -1,3 +1,25 @@
 chapter_6/GoogleNews-vectors-negative300.bin.gz
 chapter_6/*.bin.gz
 data/
+
+# large data / model files
+*.pt
+*.bin
+*.bin.gz
+*.zip
+wandb/
+__pycache__/
+
+# virtual environment
+.venv/
+
+# virtual environment
+.venv/
+
+# generated files
+wandb/
+*.pt
+*.bin
+*.bin.gz
+*.zip
+__pycache__/
