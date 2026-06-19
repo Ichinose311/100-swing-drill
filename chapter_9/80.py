@@ -1,2 +1,19 @@
-#80~84
-#ライブラリはhuggingfaceのtransformersを，モデルはGoogleのbert-base-uncasedを使用すること
+from transformers import AutoTokenizer
+
+
+def main():
+    text = "The movie was full of incomprehensibilities."
+
+    tokenizer = AutoTokenizer.from_pretrained(
+        "google-bert/bert-base-uncased"
+    )
+
+    tokens = tokenizer.tokenize(text)
+
+    print(tokens)
+
+
+if __name__ == "__main__":
+    main()
+
+#出力結果
