@@ -23,3 +23,8 @@ wandb/
 *.bin.gz
 *.zip
 __pycache__/
+
+# fine-tuned models
+chapter_9/bert_sst2_finetuned_best/
+chapter_9/*.pt
+*.safetensors
