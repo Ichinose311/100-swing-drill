@@ -13,6 +13,7 @@
     "openai>=2.40.0",
     "pandas>=2.3.3",
     "scikit-learn>=1.7.2",
+    "transformers>=5.12.1",
     "unidic-lite>=1.0.8",
 ]
      
