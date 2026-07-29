@@ -1,0 +1,5 @@
+評価文数: 1160
+BLEUスコア: 15.9244
+詳細: BLEU = 15.92 42.9/19.9/11.1/6.8 (BP = 1.000 ratio = 1.137 hyp_len = 30187 ref_len = 26560)
+Signature: nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0
+モデル: /data/student/i2311021/projects/100-swing-drill/chapter_10_2020/models/91_transformer/best_model.pt
