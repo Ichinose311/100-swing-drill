@@ -1,0 +1,2 @@
+beam_size	bleu	hypothesis_path
+100	9.6407	outputs/94_beam_search_optimized_benchmark/dev.hypothesis.beam100.detokenized.en

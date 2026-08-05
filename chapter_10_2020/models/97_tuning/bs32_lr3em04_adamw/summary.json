@@ -1,0 +1,9 @@
+{
+  "best_epoch": 8,
+  "best_dev_bleu": 14.384284879567781,
+  "best_dev_loss": 3.7140531283376155,
+  "best_model": "/data/student/i2311021/projects/100-swing-drill/chapter_10_2020/models/97_tuning/bs32_lr3em04_adamw/best_model.pt",
+  "batch_size": 32,
+  "learning_rate": 0.0003,
+  "optimizer": "adamw"
+}

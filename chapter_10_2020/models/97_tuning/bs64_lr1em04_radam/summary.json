@@ -1,0 +1,9 @@
+{
+  "best_epoch": 8,
+  "best_dev_bleu": 6.036367078756781,
+  "best_dev_loss": 4.557478045667877,
+  "best_model": "/data/student/i2311021/projects/100-swing-drill/chapter_10_2020/models/97_tuning/bs64_lr1em04_radam/best_model.pt",
+  "batch_size": 64,
+  "learning_rate": 0.0001,
+  "optimizer": "radam"
+}

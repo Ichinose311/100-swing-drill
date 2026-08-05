@@ -1,0 +1,9 @@
+Model: models/98_domain_adapt/best_model.pt
+Device: cuda
+GPU: NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition
+/data/student/i2311021/conda_envs/100-swing-drill-gpu/lib/python3.10/site-packages/torch/nn/modules/transformer.py:531: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. We recommend specifying layout=torch.jagged when constructing a nested tensor, as this layout receives active development, has better operator coverage, and works with torch.compile. (Triggered internally at /pytorch/aten/src/ATen/NestedTensorImpl.cpp:178.)
+  output = torch._nested_tensor_from_mask(
+{
+  "beam_size": 5,
+  "translation": "Kyoto is a city in Japan."
+}

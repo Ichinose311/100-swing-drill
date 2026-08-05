@@ -1,0 +1,4 @@
+GPU: NVIDIA H200 NVL
+Train: 440,286, Dev: 1,166
+Epoch 01 | 00100/06880 | loss 9.6118 | ppl 14939.69 | lr 7.5e-06 | 223.9s
+Epoch 01 | 00200/06880 | loss 9.4891 | ppl 13214.80 | lr 1.5e-05 | 365.3s

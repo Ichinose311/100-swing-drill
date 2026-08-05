@@ -1,0 +1,96 @@
+============================================================
+ビーム探索によるBLEU評価
+============================================================
+使用デバイス: cuda
+GPU: NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition
+
+モデルを読み込んでいます: /data/student/i2311021/projects/100-swing-drill/chapter_10_2020/models/91_transformer/best_model.pt
+学習済みEpoch: 10
+日本語語彙数: 30,000
+英語語彙数  : 30,000
+最大生成長  : 100
+ビーム幅    : [1, 2, 5, 10, 20, 50, 100]
+
+開発データを読み込んでいます。
+開発文数: 1,166
+
+------------------------------------------------------------
+beam size = 1
+------------------------------------------------------------
+既存結果を再利用: /data/student/i2311021/projects/100-swing-drill/chapter_10_2020/outputs/94_beam_search/dev.hypothesis.beam1.detokenized.en
+BLEU: 14.3622
+詳細: BLEU = 14.36 43.2/19.1/9.7/5.3 (BP = 1.000 ratio = 1.133 hyp_len = 27511 ref_len = 24281)
+
+------------------------------------------------------------
+beam size = 2
+------------------------------------------------------------
+既存結果を再利用: /data/student/i2311021/projects/100-swing-drill/chapter_10_2020/outputs/94_beam_search/dev.hypothesis.beam2.detokenized.en
+BLEU: 14.2512
+詳細: BLEU = 14.25 42.4/18.8/9.7/5.4 (BP = 1.000 ratio = 1.173 hyp_len = 28477 ref_len = 24281)
+
+------------------------------------------------------------
+beam size = 5
+------------------------------------------------------------
+既存結果を再利用: /data/student/i2311021/projects/100-swing-drill/chapter_10_2020/outputs/94_beam_search/dev.hypothesis.beam5.detokenized.en
+BLEU: 12.9042
+詳細: BLEU = 12.90 37.9/17.0/8.8/4.9 (BP = 1.000 ratio = 1.316 hyp_len = 31962 ref_len = 24281)
+
+------------------------------------------------------------
+beam size = 10
+------------------------------------------------------------
+既存結果を再利用: /data/student/i2311021/projects/100-swing-drill/chapter_10_2020/outputs/94_beam_search/dev.hypothesis.beam10.detokenized.en
+BLEU: 12.4793
+詳細: BLEU = 12.48 36.8/16.5/8.5/4.7 (BP = 1.000 ratio = 1.361 hyp_len = 33042 ref_len = 24281)
+
+------------------------------------------------------------
+beam size = 20
+------------------------------------------------------------
+既存結果を再利用: /data/student/i2311021/projects/100-swing-drill/chapter_10_2020/outputs/94_beam_search/dev.hypothesis.beam20.detokenized.en
+BLEU: 11.9839
+詳細: BLEU = 11.98 35.4/15.8/8.2/4.5 (BP = 1.000 ratio = 1.405 hyp_len = 34123 ref_len = 24281)
+
+------------------------------------------------------------
+beam size = 50
+------------------------------------------------------------
+既存結果を再利用: /data/student/i2311021/projects/100-swing-drill/chapter_10_2020/outputs/94_beam_search/dev.hypothesis.beam50.detokenized.en
+BLEU: 11.9316
+詳細: BLEU = 11.93 34.8/15.6/8.2/4.5 (BP = 1.000 ratio = 1.428 hyp_len = 34679 ref_len = 24281)
+
+------------------------------------------------------------
+beam size = 100
+------------------------------------------------------------
+/data/student/i2311021/conda_envs/100-swing-drill-gpu/lib/python3.10/site-packages/torch/nn/modules/transformer.py:531: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. We recommend specifying layout=torch.jagged when constructing a nested tensor, as this layout receives active development, has better operator coverage, and works with torch.compile. (Triggered internally at /pytorch/aten/src/ATen/NestedTensorImpl.cpp:178.)
+  output = torch._nested_tensor_from_mask(
+beam=100: 50/1,166文を翻訳
+beam=100: 100/1,166文を翻訳
+beam=100: 150/1,166文を翻訳
+beam=100: 200/1,166文を翻訳
+beam=100: 250/1,166文を翻訳
+beam=100: 300/1,166文を翻訳
+beam=100: 350/1,166文を翻訳
+beam=100: 400/1,166文を翻訳
+beam=100: 450/1,166文を翻訳
+beam=100: 500/1,166文を翻訳
+beam=100: 550/1,166文を翻訳
+beam=100: 600/1,166文を翻訳
+beam=100: 650/1,166文を翻訳
+beam=100: 700/1,166文を翻訳
+beam=100: 750/1,166文を翻訳
+beam=100: 800/1,166文を翻訳
+beam=100: 850/1,166文を翻訳
+beam=100: 900/1,166文を翻訳
+beam=100: 950/1,166文を翻訳
+beam=100: 1,000/1,166文を翻訳
+beam=100: 1,050/1,166文を翻訳
+beam=100: 1,100/1,166文を翻訳
+beam=100: 1,150/1,166文を翻訳
+beam=100: 1,166/1,166文を翻訳
+BLEU: 11.7086
+詳細: BLEU = 11.71 34.4/15.4/8.0/4.4 (BP = 1.000 ratio = 1.447 hyp_len = 35138 ref_len = 24281)
+
+============================================================
+完了
+============================================================
+スコア表: /data/student/i2311021/projects/100-swing-drill/chapter_10_2020/outputs/94_beam_search/beam_bleu_scores.tsv
+プロット: /data/student/i2311021/projects/100-swing-drill/chapter_10_2020/outputs/94_beam_search/beam_bleu_plot.png
+Signature: nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0
