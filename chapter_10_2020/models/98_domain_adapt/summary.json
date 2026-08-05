@@ -1,0 +1,9 @@
+{
+  "best_epoch": 1,
+  "best_dev_bleu": 17.33971359341473,
+  "best_dev_loss": 3.466916470935973,
+  "best_model": "chapter_10_2020/models/98_domain_adapt/best_model.pt",
+  "batch_size": 64,
+  "learning_rate": 3e-05,
+  "optimizer": "adamw"
+}

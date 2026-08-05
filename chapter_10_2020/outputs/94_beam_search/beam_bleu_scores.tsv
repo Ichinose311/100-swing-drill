@@ -1,0 +1,8 @@
+beam_size	bleu	hypothesis_path
+1	14.3622	chapter_10_2020/outputs/94_beam_search/dev.hypothesis.beam1.detokenized.en
+2	14.2512	chapter_10_2020/outputs/94_beam_search/dev.hypothesis.beam2.detokenized.en
+5	12.9042	chapter_10_2020/outputs/94_beam_search/dev.hypothesis.beam5.detokenized.en
+10	12.4793	chapter_10_2020/outputs/94_beam_search/dev.hypothesis.beam10.detokenized.en
+20	11.9839	chapter_10_2020/outputs/94_beam_search/dev.hypothesis.beam20.detokenized.en
+50	11.9316	chapter_10_2020/outputs/94_beam_search/dev.hypothesis.beam50.detokenized.en
+100	11.7086	chapter_10_2020/outputs/94_beam_search/dev.hypothesis.beam100.detokenized.en

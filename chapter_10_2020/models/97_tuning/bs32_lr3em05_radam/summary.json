@@ -1,0 +1,9 @@
+{
+  "best_epoch": 8,
+  "best_dev_bleu": 2.1423112393893193,
+  "best_dev_loss": 5.443521135842823,
+  "best_model": "chapter_10_2020/models/97_tuning/bs32_lr3em05_radam/best_model.pt",
+  "batch_size": 32,
+  "learning_rate": 3e-05,
+  "optimizer": "radam"
+}

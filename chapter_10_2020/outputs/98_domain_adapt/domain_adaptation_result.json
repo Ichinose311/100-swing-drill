@@ -1,0 +1,8 @@
+{
+  "beam_size": 5,
+  "baseline_bleu": 19.606396888108463,
+  "adapted_bleu": 20.552280741904887,
+  "improvement": 0.945883853796424,
+  "baseline_checkpoint": "chapter_10_2020/models/97_tuning/bs64_lr1em03_adamw/best_model.pt",
+  "adapted_checkpoint": "chapter_10_2020/models/98_domain_adapt/best_model.pt"
+}

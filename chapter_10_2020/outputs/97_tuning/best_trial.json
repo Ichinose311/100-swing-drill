@@ -1,0 +1,10 @@
+{
+  "trial": "bs64_lr1em03_adamw",
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "optimizer": "adamw",
+  "best_epoch": 8,
+  "best_dev_bleu": 16.53206190327405,
+  "best_dev_loss": 3.508445771884429,
+  "best_model": "chapter_10_2020/models/97_tuning/bs64_lr1em03_adamw/best_model.pt"
+}

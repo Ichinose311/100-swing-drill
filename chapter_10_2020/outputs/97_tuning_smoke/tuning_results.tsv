@@ -1,0 +1,2 @@
+trial	batch_size	learning_rate	optimizer	best_epoch	best_dev_bleu	best_dev_loss	best_model
+bs64_lr3em04_adamw	64	0.0003	adamw	1	0.12411245357056216	9.720993995666504	chapter_10_2020/models/97_tuning_smoke/bs64_lr3em04_adamw/best_model.pt
