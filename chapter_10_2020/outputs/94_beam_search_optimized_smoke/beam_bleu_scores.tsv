@@ -1,0 +1,2 @@
+beam_size	bleu	hypothesis_path
+100	8.3549	outputs/94_beam_search_optimized_smoke/dev.hypothesis.beam100.detokenized.en

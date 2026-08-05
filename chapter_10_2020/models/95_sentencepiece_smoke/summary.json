@@ -1,0 +1,9 @@
+{
+  "best_epoch": 1,
+  "best_dev_bleu": 0.12504238816640567,
+  "best_dev_loss": 9.720637321472168,
+  "best_model": "chapter_10_2020/models/95_sentencepiece_smoke/best_model.pt",
+  "batch_size": 8,
+  "learning_rate": 0.0003,
+  "optimizer": "adamw"
+}

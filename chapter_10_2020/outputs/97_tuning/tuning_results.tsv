@@ -1,0 +1,13 @@
+trial	batch_size	learning_rate	optimizer	best_epoch	best_dev_bleu	best_dev_loss	best_model
+bs64_lr1em03_adamw	64	0.001	adamw	8	16.53206190327405	3.508445771884429	chapter_10_2020/models/97_tuning/bs64_lr1em03_adamw/best_model.pt
+bs64_lr3em04_adamw	64	0.0003	adamw	8	15.486445047669234	3.631340889910844	chapter_10_2020/models/97_tuning/bs64_lr3em04_adamw/best_model.pt
+bs128_lr3em04_adamw	128	0.0003	adamw	8	15.401018949916248	3.635789272837183	chapter_10_2020/models/97_tuning/bs128_lr3em04_adamw/best_model.pt
+bs32_lr3em04_adamw	32	0.0003	adamw	8	14.384284879567781	3.7140531283376155	chapter_10_2020/models/97_tuning/bs32_lr3em04_adamw/best_model.pt
+bs64_lr1em03_radam	64	0.001	radam	7	10.226169159696875	4.094331296611245	chapter_10_2020/models/97_tuning/bs64_lr1em03_radam/best_model.pt
+bs64_lr1em04_adamw	64	0.0001	adamw	8	9.049537654498508	4.249987080618691	chapter_10_2020/models/97_tuning/bs64_lr1em04_adamw/best_model.pt
+bs64_lr1em04_adam	64	0.0001	adam	8	6.094133363832175	4.560162520530975	chapter_10_2020/models/97_tuning/bs64_lr1em04_adam/best_model.pt
+bs64_lr1em04_radam	64	0.0001	radam	8	6.036367078756781	4.557478045667877	chapter_10_2020/models/97_tuning/bs64_lr1em04_radam/best_model.pt
+bs32_lr3em05_radam	32	3e-05	radam	8	2.1423112393893193	5.443521135842823	chapter_10_2020/models/97_tuning/bs32_lr3em05_radam/best_model.pt
+bs64_lr1em05_adamw	64	1e-05	adamw	8	1.0054129227503206	5.9893542831719415	chapter_10_2020/models/97_tuning/bs64_lr1em05_adamw/best_model.pt
+bs64_lr1em06_radam	64	1e-06	radam	5	0.012201941153821259	7.57408487397635	chapter_10_2020/models/97_tuning/bs64_lr1em06_radam/best_model.pt
+bs64_lr1em06_adamw	64	1e-06	adamw	5	0.007787415773960588	7.56582033037757	chapter_10_2020/models/97_tuning/bs64_lr1em06_adamw/best_model.pt

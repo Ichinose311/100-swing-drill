@@ -1,0 +1,9 @@
+{
+  "best_epoch": 10,
+  "best_dev_bleu": 16.132226569783963,
+  "best_dev_loss": 3.5671728337093986,
+  "best_model": "chapter_10_2020/models/95_sentencepiece/best_model.pt",
+  "batch_size": 64,
+  "learning_rate": 0.0003,
+  "optimizer": "adamw"
+}

@@ -1,0 +1,9 @@
+{
+  "best_epoch": 5,
+  "best_dev_bleu": 0.007787415773960588,
+  "best_dev_loss": 7.56582033037757,
+  "best_model": "chapter_10_2020/models/97_tuning/bs64_lr1em06_adamw/best_model.pt",
+  "batch_size": 64,
+  "learning_rate": 1e-06,
+  "optimizer": "adamw"
+}
