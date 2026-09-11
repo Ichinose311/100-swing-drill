@@ -298,18 +298,11 @@ def load_model(
             "先に91の学習プログラムを実行してください。"
         )
 
-    # PyTorchのバージョン差に対応
-    try:
-        checkpoint = torch.load(
-            model_path,
-            map_location=device,
-            weights_only=False,
-        )
-    except TypeError:
-        checkpoint = torch.load(
-            model_path,
-            map_location=device,
-        )
+    checkpoint = torch.load(
+        model_path,
+        map_location=device,
+        weights_only=True,
+    )
 
     source_vocab = Vocabulary(
         checkpoint["source_vocab"]

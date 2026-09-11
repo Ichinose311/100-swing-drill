@@ -41,7 +41,7 @@ uk_texts = uk_text.split("\n")
 # \s=\s* : =の前後に0個以上の空白があることを許容する
 # (.+) : 1文字以上の任意の文字を貪欲マッチで取得する
 # |国名 = イギリス みたいな行からキー:国名、値:イギリスを抽出するための正規表現
-pattern = re.compile("\|(.+?)\s=\s*(.+)")
+pattern = re.compile(r"\|(.+?)\s=\s*(.+)")
 result = {}
 for line in uk_texts:
     r = re.search(pattern, line)

@@ -1,5 +1,5 @@
 from pathlib import Path
-import pickle
+import json
 
 import numpy as np
 import torch
@@ -12,8 +12,8 @@ def main():
     vector_path = base_dir.parent / "chapter_6" / "GoogleNews-vectors-negative300.bin.gz"
 
     embedding_path = base_dir / "embedding_matrix.pt"
-    token_to_id_path = base_dir / "token_to_id.pkl"
-    id_to_token_path = base_dir / "id_to_token.pkl"
+    token_to_id_path = base_dir / "token_to_id.json"
+    id_to_token_path = base_dir / "id_to_token.json"
 
     # 語彙数を制限する場合
     # GoogleNews全体を読むなら None にする
@@ -63,11 +63,11 @@ def main():
     # 保存
     torch.save(embedding_tensor, embedding_path)
 
-    with open(token_to_id_path, "wb") as f:
-        pickle.dump(token_to_id, f)
+    with open(token_to_id_path, "w", encoding="utf-8") as f:
+        json.dump(token_to_id, f, ensure_ascii=False)
 
-    with open(id_to_token_path, "wb") as f:
-        pickle.dump(id_to_token, f)
+    with open(id_to_token_path, "w", encoding="utf-8") as f:
+        json.dump(id_to_token, f, ensure_ascii=False)
 
     print("単語埋め込み行列を作成しました")
     print(f"読み込んだ単語数: {len(tokens)}")

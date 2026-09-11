@@ -1,7 +1,7 @@
 from pathlib import Path
 import zipfile
 import csv
-import pickle
+import json
 import io
 
 import torch
@@ -125,14 +125,14 @@ def load_sst_tsv(zip_path, tsv_name, token_to_id):
 def main():
     base_dir = Path(__file__).parent
 
-    token_to_id_path = base_dir / "token_to_id.pkl"
+    token_to_id_path = base_dir / "token_to_id.json"
 
     train_output_path = base_dir / "sst_train_examples.pt"
     dev_output_path = base_dir / "sst_dev_examples.pt"
 
     # 70.pyで作成した単語ID辞書を読み込む
-    with open(token_to_id_path, "rb") as f:
-        token_to_id = pickle.load(f)
+    with open(token_to_id_path, encoding="utf-8") as f:
+        token_to_id = json.load(f)
 
     # train.tsv / dev.tsv を探す
     train_info, dev_info = find_dataset_files(base_dir)

@@ -57,7 +57,14 @@ def extract_dataset() -> None:
     print(f"展開中: {ARCHIVE_PATH}")
 
     with tarfile.open(ARCHIVE_PATH, mode="r:gz") as tar:
-        tar.extractall(path=BASE_DIR)
+        destination = BASE_DIR.resolve()
+        for member in tar.getmembers():
+            member_path = (destination / member.name).resolve()
+            if destination not in member_path.parents and member_path != destination:
+                raise ValueError(f"安全でないアーカイブパスです: {member.name}")
+            if member.issym() or member.islnk():
+                raise ValueError(f"リンクを含むアーカイブは展開しません: {member.name}")
+        tar.extractall(path=destination)
 
     print(f"展開完了: {KFTT_DIR}")
 

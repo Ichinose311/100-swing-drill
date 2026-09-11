@@ -1,19 +1,39 @@
 [project]
- name = "100-swing-drill"
- version = "0.1.0"
- description = "Add your description here"
- readme = "README.md"
- requires-python = ">=3.10,<3.13"
- dependencies = [
-    "gdown>=6.0.0",
-    "google-genai>=2.6.0",
-    "matplotlib>=3.10.9",
-    "mecab-python3>=1.0.12",
-    "numpy",
-    "openai>=2.40.0",
-    "pandas>=2.3.3",
-    "scikit-learn>=1.7.2",
-    "transformers>=5.12.1",
+name = "100-swing-drill"
+version = "0.1.0"
+description = "言語処理100本ノック2025と2020年版第10章の学習用実装"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "matplotlib>=3.8",
+    "mecab-python3>=1.0.9",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "requests>=2.32",
+    "scikit-learn>=1.4",
+    "scipy>=1.12",
     "unidic-lite>=1.0.8",
 ]
-     
+
+[project.optional-dependencies]
+llm = ["google-genai>=2.6"]
+vectors = ["gensim>=4.3.3"]
+neural = [
+    "accelerate>=1.0",
+    "datasets>=3.0",
+    "torch>=2.6",
+    "tqdm>=4.66",
+    "transformers>=4.51,<6",
+    "trl>=0.17",
+    "wandb>=0.19",
+]
+translation = [
+    "flask>=3.0",
+    "janome>=0.5",
+    "nltk>=3.9",
+    "sacrebleu>=2.4",
+    "sentencepiece>=0.2",
+    "tensorboard>=2.18",
+    "torch>=2.6",
+    "tqdm>=4.66",
+]

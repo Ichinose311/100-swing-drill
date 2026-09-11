@@ -1,0 +1,53 @@
+{
+  "popular-names": {
+    "url": "https://nlp100.github.io/2025/_downloads/2ed3eac2611f4363de406df0a49805ae/popular-names.txt",
+    "sha256": "eb4dd8ae92e4492b6997b901bbcf0e0716bfc1b34b640b0c4db7e99f493e2481",
+    "bytes": 57806,
+    "destinations": [
+      "chapter_2/popular-names.txt"
+    ]
+  },
+  "wiki": {
+    "url": "https://nlp100.github.io/2025/_downloads/ca47e7baf341469cd7b585f97496c020/jawiki-country.json.gz",
+    "sha256": "7565ef27d2238425d5abc9d8ed1f77977aa965b356a9cf0701a7bf7379149e63",
+    "bytes": 5068362,
+    "destinations": [
+      "chapter_3/jawiki-country.json.gz",
+      "chapter_4/jawiki-country.json.gz"
+    ]
+  },
+  "sst2": {
+    "url": "https://dl.fbaipublicfiles.com/glue/data/SST-2.zip",
+    "sha256": "d67e16fb55739c1b32cdce9877596db1c127dc322d93c082281f64057c16deaa",
+    "bytes": 7439277,
+    "destinations": [
+      "chapter_7/SST-2.zip",
+      "chapter_8/SST-2.zip",
+      "chapter_9/SST-2.zip"
+    ]
+  },
+  "questions-words": {
+    "url": null,
+    "sha256": "8c29b3332afc46f3fb8be04cb5297bf96f39aa7131272dff57869b4485b22a36",
+    "bytes": 603955,
+    "destinations": [
+      "chapter_6/questions-words.txt"
+    ]
+  },
+  "wordsim353": {
+    "url": "https://gabrilovich.com/resources/data/wordsim353/wordsim353.zip",
+    "sha256": "4f12a5fe9650184662306f8ae72c7e6bb44c2627e0275e9f9c6eb067e3441a22",
+    "bytes": 23257,
+    "destinations": [
+      "chapter_6/wordsim353.zip"
+    ]
+  },
+  "kftt": {
+    "url": null,
+    "sha256": "fcfcaa670d6d59aa691b0e909c0d7c393852dd2fb1d6310fda9b3282dc6d1638",
+    "bytes": 99246893,
+    "destinations": [
+      "chapter_10_2020/kftt-data-1.0.tar.gz"
+    ]
+  }
+}

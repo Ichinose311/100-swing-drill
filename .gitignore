@@ -1,30 +1,56 @@
-chapter_6/GoogleNews-vectors-negative300.bin.gz
-chapter_6/*.bin.gz
+# Operating system / editors
+.DS_Store
+._*
+__MACOSX/
+*.swp
+
+# Credentials and local environments
+.env
+.env.*
+!.env.example
+.netrc
+.venv/
+venv/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.ipynb_checkpoints/
+
+# Downloaded datasets and model artifacts
 data/
-
-# large data / model files
-*.pt
-*.bin
-*.bin.gz
 *.zip
-wandb/
-__pycache__/
-
-# virtual environment
-.venv/
-
-# virtual environment
-.venv/
-
-# generated files
-wandb/
+*.gz
+*.tgz
 *.pt
+*.pth
 *.bin
-*.bin.gz
-*.zip
-__pycache__/
-
-# fine-tuned models
-chapter_9/bert_sst2_finetuned_best/
-chapter_9/*.pt
 *.safetensors
+*.pkl
+*.model
+*.vocab
+checkpoint-*/
+chapter_9/bert_sst2_finetuned_best/
+chapter_10/98_gpt2_medium_sst2_sft/
+chapter_10/99_gpt2_medium_sst2_dpo/
+chapter_10_2020/kftt-data-1.0/
+chapter_2/popular-names.txt
+chapter_3/jawiki-country.json
+chapter_6/questions-words.txt
+
+# Raw logs, local automation and reproducible outputs
+wandb/
+*.log
+events.out.tfevents.*
+.codex_*.py
+*.bak
+chapter_2/out_*.txt
+chapter_2/shuffled.txt
+chapter_6/analogy_result.txt
+chapter_6/wordsim353_result.txt
+chapter_10/96_prompt_sentiment_results.csv
+chapter_10_2020/outputs/**/*.en

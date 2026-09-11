@@ -263,7 +263,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="99: Flask translation server")
     parser.add_argument("--checkpoint", type=Path, default=DEFAULT_CHECKPOINT)
     parser.add_argument("--beam-size", type=int, default=5)
-    parser.add_argument("--host", default="0.0.0.0")
+    parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=5000)
     parser.add_argument(
         "--smoke-text",

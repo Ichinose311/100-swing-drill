@@ -652,7 +652,7 @@ def load_model_bundle(
     spm.SentencePieceProcessor,
     dict,
 ]:
-    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
+    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=True)
     model = TransformerNMT(**checkpoint["model_config"]).to(device)
     model.load_state_dict(checkpoint["model_state_dict"])
     model.eval()
@@ -733,7 +733,7 @@ def command_train(args: argparse.Namespace) -> None:
     )
     model = TransformerNMT(**model_config).to(device)
     if args.init_checkpoint:
-        initial = torch.load(args.init_checkpoint, map_location=device, weights_only=False)
+        initial = torch.load(args.init_checkpoint, map_location=device, weights_only=True)
         if initial["model_config"] != model_config:
             raise ValueError("The initial checkpoint model configuration does not match.")
         model.load_state_dict(initial["model_state_dict"])
