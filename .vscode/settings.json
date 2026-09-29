@@ -1,4 +1,0 @@
-{
-  "python.defaultInterpreterPath": ".venv/bin/python",
-  "terminal.integrated.defaultProfile.linux": "bash"
-}

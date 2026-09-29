@@ -2,7 +2,7 @@ import os  # 環境変数からAPIキーを取得するために使用
 import re  # 文字列検索に使用。今回はほぼ使っていないが、出力整形などに利用可能
 import time  # APIエラー時に一定時間待つために使用
 
-from google import genai  # Gemini APIを利用するためのライブラリ
+from gemini_client import get_client
 from google.genai import types  # Gemini APIの生成設定を指定するために使用
 
 
@@ -14,7 +14,6 @@ MODEL = "gemini-2.5-flash-lite"
 TEMPERATURE = 0.0
 
 # 環境変数 GEMINI_API_KEY からAPIキーを読み込み、Gemini APIのクライアントを作成する
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 
 def normalize_answer(text):
@@ -68,7 +67,7 @@ def ask_llm():
     for retry in range(3):
         try:
             # Gemini APIを呼び出して応答を生成する
-            response = client.models.generate_content(
+            response = get_client().models.generate_content(
                 model=MODEL,
                 contents=prompt,
                 config=types.GenerateContentConfig(
@@ -128,5 +127,3 @@ def main():
 # このファイルを直接実行したときだけ main() を実行する
 if __name__ == "__main__":
     main()
-    
-#出力結果

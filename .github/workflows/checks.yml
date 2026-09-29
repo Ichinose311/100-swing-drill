@@ -1,0 +1,39 @@
+name: Offline checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  core:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python: '3.10'
+          - os: ubuntu-latest
+            python: '3.12'
+          - os: windows-latest
+            python: '3.12'
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHONUTF8: '1'
+      WANDB_MODE: disabled
+      HF_HUB_OFFLINE: '1'
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+          enable-cache: true
+      - run: uv sync --locked
+      - run: uv run --locked python scripts/check_repository.py
+      - run: uv run --locked python scripts/check_imports.py
+      - run: uv run --locked python -m unittest discover -s tests -v
+      - run: uv run --locked python chapter_7/67.py --demo

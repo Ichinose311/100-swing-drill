@@ -2,14 +2,13 @@ import os
 import re
 import time
 
-from google import genai
+from gemini_client import get_client
 from google.genai import types
 
 
 MODEL = "gemini-2.5-flash-lite"
 TEMPERATURE = 0.0
 
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 
 def normalize_answer(text):
@@ -42,7 +41,7 @@ def ask_llm():
 
     for retry in range(3):
         try:
-            response = client.models.generate_content(
+            response = get_client().models.generate_content(
                 model=MODEL,
                 contents=prompt,
                 config=types.GenerateContentConfig(
@@ -82,5 +81,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-#出力結果

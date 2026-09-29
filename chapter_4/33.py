@@ -1,33 +1,40 @@
+from pathlib import Path
+
 import CaboCha
 
-with open("text.txt", "r", encoding="utf-8") as f:
-    text = f.read()
 
-parser = CaboCha.Parser()
-tree = parser.parse(text) # 係り受け情報つきの構造に変える
-# 分節を入れるリストと、現在の分節を入れる変数を用意する
-chunks = []
-current_chunk = None
+def main():
+    with open(Path(__file__).with_name("text.txt"), "r", encoding="utf-8") as f:
+        text = f.read()
 
-# 文節を作る
-for i in range(tree.size()): #単語ごとに見ていく
-    token = tree.token(i)
+    parser = CaboCha.Parser()
+    tree = parser.parse(text) # 係り受け情報つきの構造に変える
+    # 分節を入れるリストと、現在の分節を入れる変数を用意する
+    chunks = []
+    current_chunk = None
 
-    if token.chunk is not None: 
-        # 新しい文節
-        current_chunk = {
-            "text": "", #文節のテキスト
-            "link": token.chunk.link #係り先の文節番号
-        }
-        chunks.append(current_chunk)
+    # 文節を作る
+    for i in range(tree.size()): #単語ごとに見ていく
+        token = tree.token(i)
 
-    if current_chunk is not None: #単語をつなげて文節を作る
-        current_chunk["text"] += token.surface
+        if token.chunk is not None:
+            # 新しい文節
+            current_chunk = {
+                "text": "", #文節のテキスト
+                "link": token.chunk.link #係り先の文節番号
+            }
+            chunks.append(current_chunk)
 
-# 係り受けを出力
-for i, chunk in enumerate(chunks): #文節を1つずつ見る
-    dst = chunk["link"] #係り先の文節番号
-    if dst != -1 and dst < len(chunks): #文節じゃない、係り先が存在する
-        print(chunk["text"], "\t", chunks[dst]["text"])
+        if current_chunk is not None: #単語をつなげて文節を作る
+            current_chunk["text"] += token.surface
 
-# 出力結果
+    # 係り受けを出力
+    for i, chunk in enumerate(chunks): #文節を1つずつ見る
+        dst = chunk["link"] #係り先の文節番号
+        if dst != -1 and dst < len(chunks): #文節じゃない、係り先が存在する
+            print(chunk["text"], "\t", chunks[dst]["text"])
+
+
+
+if __name__ == "__main__":
+    main()

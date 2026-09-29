@@ -1,8 +1,7 @@
 import os
-from google import genai
+from gemini_client import get_client
 
 
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 prompt = """
 あなたは日本史の年代整序問題を解くアシスタントです。
@@ -57,11 +56,14 @@ prompt = """
 理由: 簡潔に説明
 """
 
-response = client.models.generate_content(
-    model="gemini-2.5-flash-lite",
-    contents=prompt,
-)
+def main():
+    response = get_client().models.generate_content(
+        model="gemini-2.5-flash-lite",
+        contents=prompt,
+    )
 
-print(response.text)
+    print(response.text)
 
-# 出力結果
+
+if __name__ == "__main__":
+    main()

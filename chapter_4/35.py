@@ -1,30 +1,37 @@
+from pathlib import Path
+
 import CaboCha
 
-with open("text.txt", "r", encoding="utf-8") as f:
-    text = f.read()
 
-parser = CaboCha.Parser()
-tree = parser.parse(text)
+def main():
+    with open(Path(__file__).with_name("text.txt"), "r", encoding="utf-8") as f:
+        text = f.read()
 
-chunks = []
-current_chunk = None
+    parser = CaboCha.Parser()
+    tree = parser.parse(text)
 
-for i in range(tree.size()):
-    token = tree.token(i)
+    chunks = []
+    current_chunk = None
 
-    if token.chunk is not None:
-        current_chunk = {
-            "text": "",
-            "link": token.chunk.link
-        }
-        chunks.append(current_chunk)
+    for i in range(tree.size()):
+        token = tree.token(i)
 
-    if current_chunk is not None:
-        current_chunk["text"] += token.surface
+        if token.chunk is not None:
+            current_chunk = {
+                "text": "",
+                "link": token.chunk.link
+            }
+            chunks.append(current_chunk)
 
-# 可視化
-for i, chunk in enumerate(chunks):
-    if chunk["link"] != -1:
-        print(f"{chunk['text']} → {chunks[chunk['link']]['text']}")
+        if current_chunk is not None:
+            current_chunk["text"] += token.surface
 
-# 出力結果
+    # 可視化
+    for i, chunk in enumerate(chunks):
+        if chunk["link"] != -1:
+            print(f"{chunk['text']} → {chunks[chunk['link']]['text']}")
+
+
+
+if __name__ == "__main__":
+    main()

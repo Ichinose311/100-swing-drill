@@ -1,36 +1,43 @@
+from pathlib import Path
+
 import CaboCha
 
-with open("text.txt", "r", encoding="utf-8") as f:
-    text = f.read()
 
-parser = CaboCha.Parser()
-tree = parser.parse(text)
+def main():
+    with open(Path(__file__).with_name("text.txt"), "r", encoding="utf-8") as f:
+        text = f.read()
 
-chunks = []
-current_chunk = None
+    parser = CaboCha.Parser()
+    tree = parser.parse(text)
 
-# 文節作成
-for i in range(tree.size()):
-    token = tree.token(i)
+    chunks = []
+    current_chunk = None
 
-    if token.chunk is not None:
-        current_chunk = {
-            "text": "",
-            "link": token.chunk.link
-        }
-        chunks.append(current_chunk)
+    # 文節作成
+    for i in range(tree.size()):
+        token = tree.token(i)
 
-    if current_chunk is not None:
-        current_chunk["text"] += token.surface
+        if token.chunk is not None:
+            current_chunk = {
+                "text": "",
+                "link": token.chunk.link
+            }
+            chunks.append(current_chunk)
 
-# 主語「メロス」を含む文節を探す
-for i, chunk in enumerate(chunks):
-    if "メロス" in chunk["text"]:
-        dst = chunk["link"]
+        if current_chunk is not None:
+            current_chunk["text"] += token.surface
 
-        if dst != -1 and dst < len(chunks):
-            print("主語:", chunk["text"])
-            print("述語:", chunks[dst]["text"])
-            print()
+    # 主語「メロス」を含む文節を探す
+    for i, chunk in enumerate(chunks):
+        if "メロス" in chunk["text"]:
+            dst = chunk["link"]
 
-# 出力結果
+            if dst != -1 and dst < len(chunks):
+                print("主語:", chunk["text"])
+                print("述語:", chunks[dst]["text"])
+                print()
+
+
+
+if __name__ == "__main__":
+    main()

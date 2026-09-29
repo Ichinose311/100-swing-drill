@@ -54,3 +54,19 @@ chapter_6/analogy_result.txt
 chapter_6/wordsim353_result.txt
 chapter_10/96_prompt_sentiment_results.csv
 chapter_10_2020/outputs/**/*.en
+
+# Editor preferences and generated experiment files (curated copies live in results/)
+.vscode/
+.idea/
+chapter_4/*.png
+chapter_5/*.csv
+chapter_6/country_*.txt
+chapter_6/*.png
+chapter_7/*.png
+chapter_8/token_to_id.json
+chapter_8/id_to_token.json
+chapter_10_2020/models/
+chapter_10_2020/outputs/
+*.egg-info/
+build/
+dist/

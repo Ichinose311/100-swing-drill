@@ -1,6 +1,5 @@
+from sentiment_data import df_to_examples, load_splits
 from pathlib import Path
-import zipfile
-from collections import Counter
 
 import pandas as pd
 from sklearn.feature_extraction import DictVectorizer
@@ -8,62 +7,12 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix
 
 
-def find_tsv_in_zip(zip_file, target_name):
-    """
-    zip内から train.tsv / dev.tsv を探す
-    """
-    for name in zip_file.namelist():
-        if name.endswith(target_name):
-            return name
-
-    raise FileNotFoundError(f"{target_name} が zip 内に見つかりません")
-
-
-def text_to_feature(text):
-    """
-    テキストをBoW特徴量に変換する
-    例: "too loud , too goofy"
-    -> {'too': 2, 'loud': 1, ',': 1, 'goofy': 1}
-    """
-    tokens = text.split()
-    return dict(Counter(tokens))
-
-
-def df_to_examples(df):
-    """
-    DataFrameを辞書オブジェクトのリストに変換する
-    """
-    examples = []
-
-    for _, row in df.iterrows():
-        text = row["sentence"]
-        label = int(row["label"])
-
-        example = {
-            "text": text,
-            "label": label,
-            "feature": text_to_feature(text),
-        }
-
-        examples.append(example)
-
-    return examples
-
-
 def main():
     base_dir = Path(__file__).parent
     zip_path = base_dir / "SST-2.zip"
 
     # train.tsv / dev.tsv を読み込む
-    with zipfile.ZipFile(zip_path, "r") as z:
-        train_path = find_tsv_in_zip(z, "train.tsv")
-        dev_path = find_tsv_in_zip(z, "dev.tsv")
-
-        with z.open(train_path) as f:
-            train_df = pd.read_csv(f, sep="\t")
-
-        with z.open(dev_path) as f:
-            dev_df = pd.read_csv(f, sep="\t")
+    train_df, dev_df = load_splits(zip_path)
 
     # 61番と同じ形式のデータに変換
     train_data = df_to_examples(train_df)
@@ -119,5 +68,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-#出力例

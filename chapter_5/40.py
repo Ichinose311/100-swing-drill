@@ -1,8 +1,7 @@
 import os
-from google import genai
+from gemini_client import get_client
 
 
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 prompt = """
 以下の日本史の問題に答えてください。
@@ -20,11 +19,14 @@ prompt = """
 理由: 簡潔に説明
 """
 
-response = client.models.generate_content(
-    model="gemini-2.5-flash",
-    contents=prompt,
-)
+def main():
+    response = get_client().models.generate_content(
+        model="gemini-2.5-flash",
+        contents=prompt,
+    )
 
-print(response.text)
+    print(response.text)
 
-# 出力結果
+
+if __name__ == "__main__":
+    main()
