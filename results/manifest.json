@@ -1,0 +1,438 @@
+{
+  "source_commit": "18fe954e67350b1071ae767556f44a1ed9932ffd",
+  "normalization": "Text hashes use LF; PNG bytes are unchanged.",
+  "files": [
+    {
+      "from": "chapter_10_2020/models/95_gpu0_benchmark/metrics.json",
+      "to": "results/chapter_10_2020/models/95_gpu0_benchmark/metrics.json",
+      "sha256": "bec636c825a86b85212088a3f853675e16495d2189f63a8cfdc3f268f2bb5160",
+      "bytes": 251
+    },
+    {
+      "from": "chapter_10_2020/models/95_gpu0_benchmark/summary.json",
+      "to": "results/chapter_10_2020/models/95_gpu0_benchmark/summary.json",
+      "sha256": "ffb1f3440f64fa45f9663d8db6b06f0fabb1b577d93966e64b2b0a37c0413c9b",
+      "bytes": 244
+    },
+    {
+      "from": "chapter_10_2020/models/95_sentencepiece/metrics.json",
+      "to": "results/chapter_10_2020/models/95_sentencepiece/metrics.json",
+      "sha256": "d13eb769df90fddd49132d912f09ed0a1977eb740b9a8f1bd05ca79f5b06a923",
+      "bytes": 2488
+    },
+    {
+      "from": "chapter_10_2020/models/95_sentencepiece/summary.json",
+      "to": "results/chapter_10_2020/models/95_sentencepiece/summary.json",
+      "sha256": "92f271d20cf02400978954abc908d38cdb15d8af35242ef401a28ce82712840a",
+      "bytes": 244
+    },
+    {
+      "from": "chapter_10_2020/models/95_sentencepiece_smoke/metrics.json",
+      "to": "results/chapter_10_2020/models/95_sentencepiece_smoke/metrics.json",
+      "sha256": "a6017d2fb87b8114953cdbd5f7d69f4bbf6f09fe25292e5f7e5557536819c898",
+      "bytes": 237
+    },
+    {
+      "from": "chapter_10_2020/models/95_sentencepiece_smoke/summary.json",
+      "to": "results/chapter_10_2020/models/95_sentencepiece_smoke/summary.json",
+      "sha256": "47268a01e5eb1d0f1128a45a131c09e667e987918b07f7dbab83d4cffad79df4",
+      "bytes": 248
+    },
+    {
+      "from": "chapter_10_2020/models/96_tensorboard/metrics.json",
+      "to": "results/chapter_10_2020/models/96_tensorboard/metrics.json",
+      "sha256": "0bf96994c82c630175bf24620af6b3cc51c3dc02482d30448cc35e0fca706363",
+      "bytes": 2492
+    },
+    {
+      "from": "chapter_10_2020/models/96_tensorboard/summary.json",
+      "to": "results/chapter_10_2020/models/96_tensorboard/summary.json",
+      "sha256": "59c1e17145c6bc316b2b4416b6cf31fd44240b60abf78c9e7084f3116e6d6581",
+      "bytes": 242
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs128_lr3em04_adamw/metrics.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs128_lr3em04_adamw/metrics.json",
+      "sha256": "ec44b1add7b00f3151efcbf104bc5503e9183dbdf52077aa5af4db8b3cf2fcd8",
+      "bytes": 1978
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs128_lr3em04_adamw/summary.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs128_lr3em04_adamw/summary.json",
+      "sha256": "9f0ef7cee3ba9e0ca9a27deb92c045e24226916ccabae184060a18df166d3a2b",
+      "bytes": 256
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs32_lr3em04_adamw/metrics.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs32_lr3em04_adamw/metrics.json",
+      "sha256": "ea57a2f0deff7b8ee7b548bbe40bdef3231da1f6827557d3731b42b03e2273db",
+      "bytes": 1990
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs32_lr3em04_adamw/summary.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs32_lr3em04_adamw/summary.json",
+      "sha256": "03cf533a5289e327f18c96ed4ade9ca658a4b0f997d26c8bbb0dc089ef6e57f9",
+      "bytes": 255
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs32_lr3em05_radam/metrics.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs32_lr3em05_radam/metrics.json",
+      "sha256": "048af3f19391d30348a2fbf3b1854ec20b9daeac363acede9ab570827edb5658",
+      "bytes": 1987
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs32_lr3em05_radam/summary.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs32_lr3em05_radam/summary.json",
+      "sha256": "1d0d7fb76f7f30df5d78ef247e8078ba99c79f68b04e605a9650282e7978aeac",
+      "bytes": 253
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em03_adamw/metrics.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em03_adamw/metrics.json",
+      "sha256": "7f8ce9bb7e94cd34c49396c2155358d06c2c317320826841223110ad64ecfa95",
+      "bytes": 1988
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em03_adamw/summary.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em03_adamw/summary.json",
+      "sha256": "73df92cdee79957591badb3a202e11abb64bf6c060e9bffb276dd99db80be1e3",
+      "bytes": 252
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em03_radam/metrics.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em03_radam/metrics.json",
+      "sha256": "2e8cfec6c645b01f52d1aafaa3634a45df003366197ece0c17e070b9f686b8bd",
+      "bytes": 1981
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em03_radam/summary.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em03_radam/summary.json",
+      "sha256": "948a61741713e3f52c67f8d463b9e24cff54e6fa551e93c866f70a51181bc619",
+      "bytes": 253
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em04_adam/metrics.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em04_adam/metrics.json",
+      "sha256": "93a0cd325ad5fa21f774f53dd7e50e55431d209925d7ee236064fb0779ee6bc9",
+      "bytes": 1981
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em04_adam/summary.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em04_adam/summary.json",
+      "sha256": "9d1b49a06da5998c043405dd41642e758c6b9f36d18446dfc409939e99ba4c51",
+      "bytes": 251
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em04_adamw/metrics.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em04_adamw/metrics.json",
+      "sha256": "f2461f0a00c824a396e2e6b8ebacf11cc5fb70be622d0e8d313287da1b6fca20",
+      "bytes": 1985
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em04_adamw/summary.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em04_adamw/summary.json",
+      "sha256": "07c500e508046526768475f79cf845ab217e2720bb852119eb6e923d32eec641",
+      "bytes": 253
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em04_radam/metrics.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em04_radam/metrics.json",
+      "sha256": "870283f6d2d7a2d8b2c7fae6ac0244efcb65e2c75bc194f1e15c11695a34337c",
+      "bytes": 1984
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em04_radam/summary.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em04_radam/summary.json",
+      "sha256": "4748091b9e7262b9b4f6aee562021f9833a9f86f1ce03531e330a888db62efdd",
+      "bytes": 253
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em05_adamw/metrics.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em05_adamw/metrics.json",
+      "sha256": "c9fceab33f4327cedefeb86cbaa42694a4406f865761a8fd16e12fd18c320541",
+      "bytes": 1999
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em05_adamw/summary.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em05_adamw/summary.json",
+      "sha256": "b4405d21eac78e15e556077d762d42cb58953e04bf3b67d2f4de71c419b95595",
+      "bytes": 254
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em06_adamw/metrics.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em06_adamw/metrics.json",
+      "sha256": "4c7dc2cbb2fae5de788df1effdf1e23676586e1f4c0f531eeea572eddcfde5f9",
+      "bytes": 2031
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em06_adamw/summary.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em06_adamw/summary.json",
+      "sha256": "5faef754122a5f40febf7bd34a73c0bed994d49242ee68df186f79b9cf7c05ab",
+      "bytes": 254
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em06_radam/metrics.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em06_radam/metrics.json",
+      "sha256": "bb25963102b6364ed7ee64f76d19ea917d2f1a66a02c6353cbe8ef1d8be4b5f1",
+      "bytes": 2028
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr1em06_radam/summary.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr1em06_radam/summary.json",
+      "sha256": "90b57566c4e90aabcc5b90ccecabff7e04d5a5c2d21f8f64d2fbcf8bfee9f0c6",
+      "bytes": 254
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr3em04_adamw/metrics.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr3em04_adamw/metrics.json",
+      "sha256": "6f4e3af06c89bd99a25def8ca0af176b6f5b6908a58039f043d6e03eac5c903f",
+      "bytes": 1985
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning/bs64_lr3em04_adamw/summary.json",
+      "to": "results/chapter_10_2020/models/97_tuning/bs64_lr3em04_adamw/summary.json",
+      "sha256": "fbe469d2fd9cfbba861c4e4f79d5dabffa346b593bd9dc9f66387485d88aed8c",
+      "bytes": 254
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning_smoke/bs64_lr3em04_adamw/metrics.json",
+      "to": "results/chapter_10_2020/models/97_tuning_smoke/bs64_lr3em04_adamw/metrics.json",
+      "sha256": "7ce204fa4268b31551b31644394e664ac2654b4dcb0abb3f6286394721eb297c",
+      "bytes": 239
+    },
+    {
+      "from": "chapter_10_2020/models/97_tuning_smoke/bs64_lr3em04_adamw/summary.json",
+      "to": "results/chapter_10_2020/models/97_tuning_smoke/bs64_lr3em04_adamw/summary.json",
+      "sha256": "a1ea08ab38ff95570155212bd8b5d5e76db0fc89e1728f06eb9d3b6a428db65a",
+      "bytes": 261
+    },
+    {
+      "from": "chapter_10_2020/models/98_domain_adapt/metrics.json",
+      "to": "results/chapter_10_2020/models/98_domain_adapt/metrics.json",
+      "sha256": "7ffb63bb9b0f752048597586590c1031865ecca57cdcbf499e0d75b705691333",
+      "bytes": 750
+    },
+    {
+      "from": "chapter_10_2020/models/98_domain_adapt/summary.json",
+      "to": "results/chapter_10_2020/models/98_domain_adapt/summary.json",
+      "sha256": "8246760c1a3e943106e91c3860cd6770fa4b5ee5d256471641b819d43ab78c2f",
+      "bytes": 239
+    },
+    {
+      "from": "chapter_10_2020/outputs/93_bleu/bleu_result.txt",
+      "to": "results/chapter_10_2020/outputs/93_bleu/bleu_result.txt",
+      "sha256": "5047158aa5f39f090876af4150c542ba4715c1c8dcce79702ed11834ceb27761",
+      "bytes": 274
+    },
+    {
+      "from": "chapter_10_2020/outputs/94_beam_search/beam_bleu_plot.png",
+      "to": "results/chapter_10_2020/outputs/94_beam_search/beam_bleu_plot.png",
+      "sha256": "ea1352bf164498b4aa50fc2d81b06c8223b3875a583e2174a90842d1e497a0d2",
+      "bytes": 66288
+    },
+    {
+      "from": "chapter_10_2020/outputs/94_beam_search/beam_bleu_scores.tsv",
+      "to": "results/chapter_10_2020/outputs/94_beam_search/beam_bleu_scores.tsv",
+      "sha256": "dff86eaa0ef549a628cb7684f9d534cf408e98d6bd1256babce3da4464aad849",
+      "bytes": 636
+    },
+    {
+      "from": "chapter_10_2020/outputs/94_beam_search_optimized_benchmark/beam_bleu_plot.png",
+      "to": "results/chapter_10_2020/outputs/94_beam_search_optimized_benchmark/beam_bleu_plot.png",
+      "sha256": "c80826f99066e478d40bbcb9d28829f23ce54997babdba3d40fb344160be22af",
+      "bytes": 42416
+    },
+    {
+      "from": "chapter_10_2020/outputs/94_beam_search_optimized_benchmark/beam_bleu_scores.tsv",
+      "to": "results/chapter_10_2020/outputs/94_beam_search_optimized_benchmark/beam_bleu_scores.tsv",
+      "sha256": "316b9acdf77739c316e5a188d83b2d7f4d85faac6ac3812ac3c632130730dd9b",
+      "bytes": 123
+    },
+    {
+      "from": "chapter_10_2020/outputs/94_beam_search_optimized_smoke/beam_bleu_plot.png",
+      "to": "results/chapter_10_2020/outputs/94_beam_search_optimized_smoke/beam_bleu_plot.png",
+      "sha256": "ff916c4c48d2d9cfdf7476ea1d5659f77195ec7e96178e32b46b129799f7fe97",
+      "bytes": 42340
+    },
+    {
+      "from": "chapter_10_2020/outputs/94_beam_search_optimized_smoke/beam_bleu_scores.tsv",
+      "to": "results/chapter_10_2020/outputs/94_beam_search_optimized_smoke/beam_bleu_scores.tsv",
+      "sha256": "e45b8642207ce1949d846d09b9befd9d0537f298ddcb63b9246c6ad6fb3a510b",
+      "bytes": 119
+    },
+    {
+      "from": "chapter_10_2020/outputs/95_sentencepiece/beam_smoke/beam_bleu_plot.png",
+      "to": "results/chapter_10_2020/outputs/95_sentencepiece/beam_smoke/beam_bleu_plot.png",
+      "sha256": "6e08e5f3c2fb7417cd455d946b984796941e2f10f9d993d59b9aa8100cd2f1a1",
+      "bytes": 57514
+    },
+    {
+      "from": "chapter_10_2020/outputs/95_sentencepiece/beam_smoke/beam_bleu_scores.tsv",
+      "to": "results/chapter_10_2020/outputs/95_sentencepiece/beam_smoke/beam_bleu_scores.tsv",
+      "sha256": "922a1f41aa79885e7fe139b6c7a44679d257dcd56534d5d560b75ca55e82d5bd",
+      "bytes": 104
+    },
+    {
+      "from": "chapter_10_2020/outputs/97_tuning/best_trial.json",
+      "to": "results/chapter_10_2020/outputs/97_tuning/best_trial.json",
+      "sha256": "b346c61a408afafbc97745f822cbe52c190af12cbdd656b2ee16b2953eb0685a",
+      "bytes": 285
+    },
+    {
+      "from": "chapter_10_2020/outputs/97_tuning/tuning_results.png",
+      "to": "results/chapter_10_2020/outputs/97_tuning/tuning_results.png",
+      "sha256": "d7a81d795817992b2d5c93447f6fdd1c86540cd9a2de8e7d47049ec325fa24fa",
+      "bytes": 49792
+    },
+    {
+      "from": "chapter_10_2020/outputs/97_tuning/tuning_results.tsv",
+      "to": "results/chapter_10_2020/outputs/97_tuning/tuning_results.tsv",
+      "sha256": "cdf8ff6fe37536dc86a701ef49a6fb5585155525485678017f5f8e0f8c857f34",
+      "bytes": 1765
+    },
+    {
+      "from": "chapter_10_2020/outputs/97_tuning_smoke/best_trial.json",
+      "to": "results/chapter_10_2020/outputs/97_tuning_smoke/best_trial.json",
+      "sha256": "be039a6036764b437bb1e0293a3673edf5901b09123cac9420ef9b338f5963ce",
+      "bytes": 294
+    },
+    {
+      "from": "chapter_10_2020/outputs/97_tuning_smoke/tuning_results.png",
+      "to": "results/chapter_10_2020/outputs/97_tuning_smoke/tuning_results.png",
+      "sha256": "1c1547b8316bdbecbb89f51525b806fccfa0748d10346cffd7e64e48110eec77",
+      "bytes": 47183
+    },
+    {
+      "from": "chapter_10_2020/outputs/97_tuning_smoke/tuning_results.tsv",
+      "to": "results/chapter_10_2020/outputs/97_tuning_smoke/tuning_results.tsv",
+      "sha256": "39faecf3104e7005074ca274a584a9469a0c60b43d0d12d230051e4f8799ce26",
+      "bytes": 238
+    },
+    {
+      "from": "chapter_10_2020/outputs/98_domain_adapt/domain_adaptation_result.json",
+      "to": "results/chapter_10_2020/outputs/98_domain_adapt/domain_adaptation_result.json",
+      "sha256": "33cf59b50c133fd6cd48f314d10d90414b9908fa67368903131c124cd5721d8a",
+      "bytes": 307
+    },
+    {
+      "from": "chapter_4/39_zipf.png",
+      "to": "results/chapter_4/39_zipf.png",
+      "sha256": "2baf27df7c84f18466e7cc73ebdd3317f3a8b8314396e286de900e49af039a9b",
+      "bytes": 17674
+    },
+    {
+      "from": "chapter_5/senryu_judge_robustness.csv",
+      "to": "results/chapter_5/senryu_judge_robustness.csv",
+      "sha256": "7b42bfd922187f92bee379f5a2b017a3ade31e7e19124d7005918decba64495c",
+      "bytes": 21022
+    },
+    {
+      "from": "chapter_6/country_kmeans_result.txt",
+      "to": "results/chapter_6/country_kmeans_result.txt",
+      "sha256": "131ba35eebdea4d6daf22714566b83258882786524dba2770c5b6b64327ebeef",
+      "bytes": 1172
+    },
+    {
+      "from": "chapter_6/country_tsne.png",
+      "to": "results/chapter_6/country_tsne.png",
+      "sha256": "d1c45f7be46e1127fb09b7d40029a4f74bef1fc9e27c580ef1d5828a5dc6b835",
+      "bytes": 574472
+    },
+    {
+      "from": "chapter_6/country_tsne_result.txt",
+      "to": "results/chapter_6/country_tsne_result.txt",
+      "sha256": "d016d00aa63783d04cdd391ea58de4fb4e9c489a78428e009178080d733843a7",
+      "bytes": 5288
+    },
+    {
+      "from": "chapter_6/country_ward_dendrogram.png",
+      "to": "results/chapter_6/country_ward_dendrogram.png",
+      "sha256": "f005ae5396436b5ab01369e0dc1b14f682389ac4df25e95c119adaee4866c33d",
+      "bytes": 418360
+    },
+    {
+      "from": "chapter_7/regularization_accuracy.png",
+      "to": "results/chapter_7/regularization_accuracy.png",
+      "sha256": "f8216a4ece6ea692fdba74114cd9e09cfdff9aeaeb73e8a6482131a8ed10a193",
+      "bytes": 38211
+    }
+  ],
+  "removed": [
+    {
+      "path": ".vscode/settings.json",
+      "reason": "OS-specific editor preferences"
+    },
+    {
+      "path": "chapter_10_2020/models/95_gpu0_benchmark/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/95_gpu0_benchmark/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/95_sentencepiece/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/95_sentencepiece/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/95_sentencepiece_smoke/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/95_sentencepiece_smoke/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/96_tensorboard/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/96_tensorboard/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/98_domain_adapt/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/98_domain_adapt/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/97_tuning/bs128_lr3em04_adamw/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/97_tuning/bs128_lr3em04_adamw/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/97_tuning/bs32_lr3em04_adamw/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/97_tuning/bs32_lr3em04_adamw/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/97_tuning/bs32_lr3em05_radam/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/97_tuning/bs32_lr3em05_radam/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/97_tuning/bs64_lr1em03_adamw/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/97_tuning/bs64_lr1em03_adamw/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/97_tuning/bs64_lr1em03_radam/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/97_tuning/bs64_lr1em03_radam/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/97_tuning/bs64_lr1em04_adam/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/97_tuning/bs64_lr1em04_adam/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/97_tuning/bs64_lr1em04_adamw/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/97_tuning/bs64_lr1em04_adamw/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/97_tuning/bs64_lr1em04_radam/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/97_tuning/bs64_lr1em04_radam/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/97_tuning/bs64_lr1em05_adamw/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/97_tuning/bs64_lr1em05_adamw/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/97_tuning/bs64_lr1em06_adamw/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/97_tuning/bs64_lr1em06_adamw/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/97_tuning/bs64_lr1em06_radam/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/97_tuning/bs64_lr1em06_radam/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/97_tuning/bs64_lr3em04_adamw/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/97_tuning/bs64_lr3em04_adamw/metrics.json"
+    },
+    {
+      "path": "chapter_10_2020/models/97_tuning_smoke/bs64_lr3em04_adamw/metrics.tsv",
+      "reason": "Identical rows/columns retained in results/chapter_10_2020/models/97_tuning_smoke/bs64_lr3em04_adamw/metrics.json"
+    }
+  ]
+}
