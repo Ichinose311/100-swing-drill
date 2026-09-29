@@ -18,6 +18,34 @@ from check_imports import load
 
 
 class CoreTests(unittest.TestCase):
+    def test_alternate_characters_match_task_01(self):
+        module = load(ROOT / "chapter_1/01.py")
+        with contextlib.redirect_stdout(io.StringIO()) as output:
+            module.main()
+        self.assertEqual(output.getvalue().strip(), "タクシー")
+
+    def test_character_and_word_ngrams(self):
+        module = load(ROOT / "chapter_1/ngrams.py")
+        self.assertEqual(module.generate_n_gram(3, "I am"), ["I a", " am"])
+        self.assertEqual(module.generate_n_gram(2, ["I", "am", "an", "NLPer"]),
+                         [["I", "am"], ["am", "an"], ["an", "NLPer"]])
+        self.assertEqual(module.generate_n_gram(3, []), [])
+        with self.assertRaises(ValueError):
+            module.generate_n_gram(0, "text")
+
+    def test_membership_is_reported_for_both_sets(self):
+        module = load(ROOT / "chapter_1/06.py")
+        with contextlib.redirect_stdout(io.StringIO()) as output:
+            module.main()
+        self.assertIn("X contains se: True", output.getvalue())
+        self.assertIn("Y contains se: False", output.getvalue())
+
+    def test_cipher_leaves_non_ascii_letters_unchanged(self):
+        module = load(ROOT / "chapter_1/08.py")
+        original = "Hello, World! café 日本語"
+        self.assertEqual(module.cipher("azAé"), "zaAé")
+        self.assertEqual(module.cipher(module.cipher(original)), original)
+
     def test_all_string_exercises_run_outside_repo(self):
         with tempfile.TemporaryDirectory() as cwd:
             for path in sorted((ROOT / "chapter_1").glob("[0-9][0-9].py")):

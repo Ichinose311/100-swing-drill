@@ -1,6 +1,4 @@
-def generate_n_gram(n, text):
-    text = text.replace(" ", "")
-    return [text[i:i+n] for i in range(len(text)-n+1)]
+from ngrams import generate_n_gram
 
 
 def main():
@@ -16,7 +14,8 @@ def main():
     print(set_x | set_y)  # 和集合
     print(set_x & set_y)  # 積集合
     print(set_x - set_y)  # 差集合
-    print('se' in set_x or 'se' in set_y)
+    print("X contains se:", 'se' in set_x)
+    print("Y contains se:", 'se' in set_y)
 
 
 if __name__ == "__main__":
