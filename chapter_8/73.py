@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 import torch
@@ -140,7 +141,8 @@ def main():
 
     # wandb初期化
     run = wandb.init(
-        entity="account",
+        entity=os.environ.get("WANDB_ENTITY"),
+        mode=os.environ.get("WANDB_MODE", "disabled"),
         project="100-swing-drill-chapter-8",
         name="73-bow-logistic-regression",
         config=config
@@ -283,5 +285,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-#出力結果

@@ -5,7 +5,7 @@ import time  # API呼び出し間隔を空けるために使用
 from collections import Counter  # 予測ラベルの出現回数を数えるために使用
 from pathlib import Path  # ファイルパスを扱いやすくするために使用
 
-from google import genai  # Gemini APIを利用するためのライブラリ
+from gemini_client import get_client
 from google.genai import types  # Gemini APIの生成設定を指定するために使用
 
 
@@ -28,7 +28,6 @@ REQUEST_INTERVAL = 7
 TEMPERATURE = 0.0
 
 # 環境変数 GEMINI_API_KEY からAPIキーを読み込み、Gemini APIのクライアントを作成する
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 
 def find_csv_path(subject):
@@ -38,12 +37,8 @@ def find_csv_path(subject):
     複数の候補パスを順番に確認する。
     """
 
-    candidates = [
-        Path("data/JMMLU/JMMLU") / f"{subject}.csv",
-        Path("data/JMMLU/JMMLU_NC_ND") / f"{subject}.csv",
-        Path("../data/JMMLU/JMMLU") / f"{subject}.csv",
-        Path("../data/JMMLU/JMMLU_NC_ND") / f"{subject}.csv",
-    ]
+    data_dir = Path(__file__).resolve().parents[1] / "data" / "JMMLU"
+    candidates = [data_dir / subset / f"{subject}.csv" for subset in ("JMMLU", "JMMLU_NC_ND")]
 
     # 候補パスの中から実際に存在するファイルを返す
     for path in candidates:
@@ -160,7 +155,7 @@ D. {d}
     for retry in range(3):
         try:
             # Gemini APIを呼び出して、モデルに解答を生成させる
-            response = client.models.generate_content(
+            response = get_client().models.generate_content(
                 model=MODEL,
                 contents=prompt,
                 config=types.GenerateContentConfig(
@@ -303,5 +298,3 @@ def main():
 # このファイルを直接実行したときだけ main() を実行する
 if __name__ == "__main__":
     main()
-    
-#出力結果

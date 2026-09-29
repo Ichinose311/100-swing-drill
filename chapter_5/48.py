@@ -1,3 +1,4 @@
+from pathlib import Path
 import csv  # 実験結果をCSVファイルとして保存するために使用
 import json  # Geminiの出力をJSONとして読み込むために使用
 import os  # 環境変数からAPIキーを取得するために使用
@@ -6,7 +7,7 @@ import statistics  # 平均や分散を計算するために使用
 import time  # APIエラー時や連続呼び出し時に一定時間待つために使用
 from collections import defaultdict  # 条件ごと・川柳ごとにスコアをまとめるために使用
 
-from google import genai  # Gemini APIを利用するためのライブラリ
+from gemini_client import get_client
 from google.genai import types  # Gemini APIの生成設定を指定するために使用
 
 
@@ -26,7 +27,6 @@ N_TRIALS = 3
 REQUEST_INTERVAL = 7
 
 # 環境変数 GEMINI_API_KEY からAPIキーを読み込み、Gemini APIのクライアントを作成する
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 
 # 問題46で生成した川柳を入れる
@@ -162,7 +162,7 @@ JSON形式:
     for retry in range(3):
         try:
             # Gemini APIを呼び出して、川柳の評価を生成させる
-            response = client.models.generate_content(
+            response = get_client().models.generate_content(
                 model=MODEL,
                 contents=prompt,
                 config=types.GenerateContentConfig(
@@ -253,7 +253,7 @@ def run_experiment():
     return all_results
 
 
-def save_results_csv(all_results, filename="senryu_judge_robustness.csv"):
+def save_results_csv(all_results, filename=Path(__file__).with_name("senryu_judge_robustness.csv")):
     """
     実験結果をCSVファイルに保存する関数。
 
@@ -374,5 +374,3 @@ def main():
 # このファイルを直接実行したときだけ main() を実行する
 if __name__ == "__main__":
     main()
-    
-#出力結果

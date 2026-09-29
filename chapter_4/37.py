@@ -1,8 +1,13 @@
 from wiki_corpus import count_words
 
-counter = count_words(pos="名詞")
 
-for word, count in counter.most_common(20):
-    print(f"{word}\t{count}")
+def main():
+    counter = count_words(pos="名詞")
 
-# 出力結果
+    for word, count in counter.most_common(20):
+        print(f"{word}\t{count}")
+
+
+
+if __name__ == "__main__":
+    main()

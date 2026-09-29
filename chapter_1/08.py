@@ -1,4 +1,3 @@
-# 明確な単語を選ぶ（p.10）
 def cipher(text):
     result = ""
 
@@ -12,5 +11,13 @@ def cipher(text):
 
     return result
 
-print(cipher("Hello, World!")) 
-print(cipher(cipher("Hello, World!")))
+
+def main():
+    # 明確な単語を選ぶ（p.10）
+
+    print(cipher("Hello, World!"))
+    print(cipher(cipher("Hello, World!")))
+
+
+if __name__ == "__main__":
+    main()

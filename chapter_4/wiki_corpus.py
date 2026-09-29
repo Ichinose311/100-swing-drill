@@ -54,7 +54,7 @@ def find_data_file():
     candidates = [
         Path("jawiki-country.json.gz"),
         Path(__file__).resolve().parent / "jawiki-country.json.gz",
-        Path(__file__).resolve().parent.parent / "jawiki-country.json.gz",
+        Path(__file__).resolve().parent.parent / "chapter_3" / "jawiki-country.json.gz",
     ]
 
     for path in candidates:

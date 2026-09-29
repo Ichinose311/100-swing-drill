@@ -1,6 +1,6 @@
 import os  # 環境変数からAPIキーを取得するために使用
 
-from google import genai  # Gemini APIを利用するためのライブラリ
+from gemini_client import get_client
 
 
 # トークン数を計測する対象のGeminiモデル
@@ -17,7 +17,6 @@ TEXT = """
 
 
 # 環境変数 GEMINI_API_KEY からAPIキーを読み込み、Gemini APIのクライアントを作成する
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 
 def main():
@@ -28,7 +27,7 @@ def main():
     """
 
     # Gemini APIのcount_tokensを使って、TEXTのトークン数を計測する
-    result = client.models.count_tokens(
+    result = get_client().models.count_tokens(
         model=MODEL,
         contents=TEXT,
     )
@@ -48,5 +47,3 @@ def main():
 # このファイルを直接実行したときだけ main() を実行する
 if __name__ == "__main__":
     main()
-    
-#出力結果

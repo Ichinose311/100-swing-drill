@@ -5,6 +5,7 @@ import csv
 import heapq
 import json
 import math
+import os
 import random
 import time
 from dataclasses import dataclass
@@ -627,8 +628,9 @@ def save_checkpoint(
             "scheduler_state_dict": scheduler.state_dict(),
             "scaler_state_dict": scaler.state_dict(),
             "model_config": model_config,
-            "source_spm": str(source_spm.resolve()),
-            "target_spm": str(target_spm.resolve()),
+            "source_spm": Path(os.path.relpath(source_spm.resolve(), path.parent.resolve())).as_posix(),
+            "target_spm": Path(os.path.relpath(target_spm.resolve(), path.parent.resolve())).as_posix(),
+            "spm_path_base": "checkpoint",
             "special_tokens": {
                 "pad_id": PAD_ID,
                 "unk_id": UNK_ID,
@@ -658,6 +660,11 @@ def load_model_bundle(
     model.eval()
     source_path = source_spm_path or Path(checkpoint["source_spm"])
     target_path = target_spm_path or Path(checkpoint["target_spm"])
+    if checkpoint.get("spm_path_base") == "checkpoint":
+        if source_spm_path is None:
+            source_path = checkpoint_path.parent / source_path
+        if target_spm_path is None:
+            target_path = checkpoint_path.parent / target_path
     source_sp = spm.SentencePieceProcessor(model_file=str(source_path))
     target_sp = spm.SentencePieceProcessor(model_file=str(target_path))
     return model, source_sp, target_sp, checkpoint

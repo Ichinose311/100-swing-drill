@@ -12,7 +12,7 @@ import tempfile
 import requests
 
 ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = json.loads(Path(__file__).with_name("datasets.json").read_text())
+MANIFEST = json.loads(Path(__file__).with_name("datasets.json").read_text(encoding="utf-8"))
 
 
 def digest(path: Path) -> str:
